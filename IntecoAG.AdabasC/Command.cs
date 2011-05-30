@@ -206,6 +206,7 @@ namespace IntecoAG.AdabasC
                              rbp = m_rb.m_buffer,
                              ibp = m_ib.m_buffer)
                 {
+                    m_cb.cb_call_type = 0x30;
                     AdaLnkX.adabas(ref this.m_cb, (IntPtr)fbp, (IntPtr)rbp, IntPtr.Zero, IntPtr.Zero, (IntPtr)ibp);
                 }
                 if (m_cb.cb_return_code == 3)
